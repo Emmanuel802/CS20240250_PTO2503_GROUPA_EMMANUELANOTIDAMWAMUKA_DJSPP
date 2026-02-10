@@ -1,0 +1,274 @@
+.detailContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.messageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  gap: 1rem;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255, 255, 255, 0.08);
+  border-top: 4px solid var(--palette-4);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.errorContainer {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.error {
+  color: #721c24;
+  font-size: 1rem;
+  margin: 0 0 1rem 0;
+}
+
+.notFoundContainer {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.notFound {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.content {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.2rem;
+  background-color: var(--palette-4);
+  border: 1px solid rgba(108, 92, 231, 0.25);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.18s ease;
+  margin-bottom: 2rem;
+}
+
+.backButton:hover {
+  filter: brightness(0.95);
+  box-shadow: 0 6px 18px rgba(108, 92, 231, 0.12);
+}
+
+.backButton:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+.showHeader {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  background: linear-gradient(
+    180deg,
+    rgba(108, 92, 231, 0.04),
+    rgba(0, 0, 0, 0)
+  );
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.showImage {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.showInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.showTitle {
+  margin: 0;
+  font-size: 2.2rem;
+  color: var(--palette-4);
+  line-height: 1.2;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+}
+
+.genreTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.genreTag {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--palette-4);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.metadata {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.02);
+  border-left: 4px solid var(--palette-4);
+  border-radius: 4px;
+}
+
+.metadata p {
+  margin: 0;
+  color: var(--text-bright);
+  font-size: 0.95rem;
+}
+
+.metadata strong {
+  color: var(--text-bright);
+}
+
+.description {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.description h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+  color: var(--text-bright);
+}
+
+.description p {
+  margin: 0;
+  color: var(--text-bright);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .detailContainer {
+    padding: 1.5rem;
+  }
+
+  .showHeader {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .showImage {
+    max-width: 100%;
+    height: 300px;
+  }
+
+  .showTitle {
+    font-size: 1.8rem;
+  }
+
+  .genreTags {
+    gap: 0.6rem;
+  }
+
+  .genreTag {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .messageContainer {
+    padding: 3rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .detailContainer {
+    padding: 1rem;
+  }
+
+  .showHeader {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .showImage {
+    height: 250px;
+  }
+
+  .showTitle {
+    font-size: 1.5rem;
+  }
+
+  .metadata {
+    padding: 0.8rem;
+  }
+
+  .description h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+    color: var(--text-bright);
+  }
+  .description p {
+    margin: 0;
+    color: var(--text-bright);
+    line-height: 1.6;
+    font-size: 0.95rem;
+  }
+
+  .description {
+    padding: 1rem;
+  }
+
+  .backButton {
+    width: 100%;
+    justify-content: center;
+    padding: 0.8rem 1rem;
+  }
+
+  .messageContainer {
+    padding: 2rem 1rem;
+  }
+}
