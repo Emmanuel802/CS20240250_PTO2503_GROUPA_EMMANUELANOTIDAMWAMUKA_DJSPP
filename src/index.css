@@ -1,0 +1,37 @@
+/* Default Dark Mode */
+:root {
+  --primary-color: #000000;
+  --secondary-color: #f1c40f;
+  --palette-4: #6c5ce7;
+  --background-color: #000000;
+  --text-color: #ecf0f1;
+  --card-bg: #161616;
+  --error-bg: #e74c3c;
+  --error-text: #ecf0f1;
+  --grey-text: #bdc3c7;
+  --text-bright: #f4f6fb;
+}
+
+/* Light Mode Theme */
+:root.theme-light {
+  --primary-color: #ffffff;
+  --secondary-color: #f39c12;
+  --palette-4: #8e44ad;
+  --background-color: #f8f9fa;
+  --text-color: #2c3e50;
+  --card-bg: #ffffff;
+  --error-bg: #e74c3c;
+  --error-text: #ffffff;
+  --grey-text: #7f8c8d;
+  --text-bright: #1a1a1a;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  background: var(--background-color);
+  color: var(--text-color);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
