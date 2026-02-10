@@ -1,0 +1,165 @@
+.episodeListContainer {
+  padding: 1.5rem;
+  background: linear-gradient(180deg, rgba(108, 92, 231, 0.02), transparent);
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.episodeList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.episodeItem {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 1rem;
+  background-color: var(--card-bg);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  transition: box-shadow 0.2s ease;
+}
+
+.episodeItem:hover {
+  box-shadow: 0 8px 24px rgba(108, 92, 231, 0.08);
+}
+
+.episodeContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.episodeHeader {
+  margin-bottom: 0.5rem;
+}
+
+.episodeNumber {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--palette-4);
+  margin-bottom: 0.3rem;
+}
+
+.episodeTitle {
+  margin: 0.3rem 0;
+  font-size: 1.1rem;
+  color: var(--text-color);
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.episodeDescription {
+  margin: 0.5rem 0 0 0;
+  color: var(--grey-text);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  margin-top: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.playBtn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.playBtn:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+.playBtn.playing {
+  background-color: var(--palette-4);
+}
+
+.episodeImage {
+  width: 100px;
+  height: 100px;
+  border-radius: 4px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.noEpisodes {
+  padding: 2rem 1rem;
+  text-align: center;
+  color: #999;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .episodeList {
+    gap: 1rem;
+  }
+
+  .episodeItem {
+    gap: 1rem;
+    padding: 0.8rem;
+    flex-direction: column;
+  }
+
+  .episodeImage {
+    width: 80px;
+    height: 80px;
+  }
+
+  .episodeTitle {
+    font-size: 1rem;
+  }
+
+  .episodeDescription {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .episodeListContainer {
+    padding: 1rem;
+  }
+
+  .episodeList {
+    gap: 0.8rem;
+  }
+
+  .episodeItem {
+    gap: 0.8rem;
+    padding: 0.6rem;
+    border-radius: 4px;
+  }
+
+  .episodeImage {
+    width: 70px;
+    height: 70px;
+  }
+
+  .episodeNumber {
+    font-size: 0.8rem;
+  }
+
+  .episodeTitle {
+    font-size: 0.95rem;
+  }
+
+  .episodeDescription {
+    font-size: 0.85rem;
+  }
+}
