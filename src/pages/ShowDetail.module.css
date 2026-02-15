@@ -271,4 +271,30 @@
   .messageContainer {
     padding: 2rem 1rem;
   }
+  .showHeader {
+    grid-template-columns: 1fr;
+  }
+  .showImage {
+    max-width: 100%;
+    height: 180px;
+  }
+  .showTitle {
+    font-size: 1.2rem;
+  }
+  .genreTag {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
+  }
+  .metadata {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+  }
+  .description {
+    font-size: 0.85rem;
+    padding: 0.7rem;
+  }
+  .backButton {
+    font-size: 0.85rem;
+    padding: 0.6rem 0.8rem;
+  }
 }

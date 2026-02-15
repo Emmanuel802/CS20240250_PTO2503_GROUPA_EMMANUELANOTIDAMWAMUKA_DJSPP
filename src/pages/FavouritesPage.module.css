@@ -3,7 +3,6 @@
   margin: 0 auto;
   padding: 2rem 1rem;
   padding-bottom: 150px;
-}
 
 .content {
   background: var(--card-bg);
@@ -276,4 +275,53 @@
     flex: 1;
     min-width: 80px;
   }
+}
+@media (max-width: 480px) {
+  .favouritesContainer {
+    padding: 0.5rem 0.2rem;
+    padding-bottom: 80px;
+  }
+  .content {
+    padding: 0.7rem;
+    border-radius: 4px;
+  }
+  .content h1 {
+    font-size: 1.1rem;
+  }
+  .controls {
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+  .showGroup {
+    padding: 0.7rem;
+    border-radius: 4px;
+  }
+  .showTitle {
+    font-size: 1rem;
+    padding-bottom: 0.2rem;
+  }
+  .episodeItem {
+    padding: 0.5rem;
+    border-radius: 4px;
+  }
+  .episodeTitle {
+    font-size: 0.9rem;
+  }
+  .seasonBadge {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+  }
+  .episodeDescription {
+    font-size: 0.8rem;
+  }
+  .episodeActions {
+    gap: 0.4rem;
+  }
+  .playBtn,
+  .removeBtn {
+    font-size: 0.8rem;
+    min-width: 60px;
+    padding: 0.4rem 0.6rem;
+  }
+}
 }
